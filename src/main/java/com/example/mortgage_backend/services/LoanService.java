@@ -55,6 +55,7 @@ public class LoanService {
     }
 
     // ====================|| P4 || CREDIT EVALUATION ||
+    /*
     public List<Integer> evaluateCredit(LoanEntity loan){
         List<Integer> fault_list = new ArrayList<>();
 
@@ -66,6 +67,7 @@ public class LoanService {
 
         return fault_list;
     }
+    */
 
     // ====================|| P6 || TOTAL COSTS ||
     public List<Integer> getTotalCosts(Long id) {
@@ -75,9 +77,9 @@ public class LoanService {
         int loanDuration = loan.getDuration();
 
         int monthlyFee = loan.getMonthlyFee();
-        int insurance1 = (int)(loan.getAmount()*0.0003);
+        int insurance1 = (int) Math.round(loan.getAmount()*0.0003);
         int insurance2 = 20000;
-        int commission = (int)(loan.getAmount()*0.01);
+        int commission = (int) Math.round(loan.getAmount()*0.01);
         int monthlyCost = monthlyFee + insurance1 + insurance2;
         int totalCost = (monthlyFee * (loanDuration*12)) + commission;
 

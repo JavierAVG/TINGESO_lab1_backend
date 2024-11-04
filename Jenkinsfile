@@ -11,14 +11,12 @@ pipeline {
             }
         }
 
-        /*
         stage('Unit Tests') {
             steps {
                 // Run Maven 'test' phase. It compiles the test sources and runs the unit tests
                 sh 'mvn test'
             }
         }
-        */
 
         stage('Build docker image'){
             steps{

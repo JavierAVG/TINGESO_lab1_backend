@@ -10,9 +10,5 @@ import java.util.List;
 
 @Repository
 public interface LoanRepository extends JpaRepository<LoanEntity, Long> {
-
     List<LoanEntity> findByIdClient (Long id);
-
-    //@Query(value = "SELECT loan.monthly_fee FROM loan WHERE loan.id = :id", nativeQuery = true)
-    //int getLoansByClientId(@Param("id") Long id);
 }
