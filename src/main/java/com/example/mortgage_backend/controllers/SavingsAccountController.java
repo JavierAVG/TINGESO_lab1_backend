@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/savingsaccount")
-@CrossOrigin("*")
 public class SavingsAccountController {
     @Autowired
     SavingsAccountService savingsAccountService;
