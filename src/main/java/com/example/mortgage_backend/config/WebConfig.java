@@ -12,9 +12,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")  // Aplica a todas las rutas
-                .allowedOrigins("http://138.68.5.200:8070")  // Permite solicitudes desde estos orígenes (frontend)
+                .allowedOrigins("*")  // Permite solicitudes desde estos orígenes (frontend)
                 .allowedMethods("GET", "POST", "PUT", "DELETE")  // Los métodos HTTP permitidos
                 .allowedHeaders("*")  // Permite cualquier cabecera
-                .allowCredentials(true);  // Permite que se envíen cookies o credenciales si es necesario
+                .allowCredentials(false);  // Permite que se envíen cookies o credenciales si es necesario
     }
 }
